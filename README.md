@@ -1,2 +1,2 @@
-# Validacija-podataka
-Validacija podataka prilikom registracije korisnika
+# Validacija-forme
+Validacija forme prilikom registracije korisnika
