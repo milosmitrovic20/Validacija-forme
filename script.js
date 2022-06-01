@@ -7,8 +7,8 @@ let greske = {
     "ponovi_lozinku": []
 };
 
-unosi.forEach(x => {
-    x.addEventListener('change', e => {
+unosi.forEach(element => {
+    element.addEventListener('change', e => {
         let trenutniUnos = e.target;
         let vrednostUnosa = trenutniUnos.value;
         let imeUnosa = trenutniUnos.getAttribute('name');
@@ -53,15 +53,15 @@ const ceste_greske = () => {
     }
 
     for (let key of Object.keys(greske)) {
-        let unos = document.querySelector('input[name"${key}"]');
-        let element = unos.element;
-        let greske = document.createElement('ul');
-        element.appendChild(greske);
+        let unos = document.querySelector(`input[name = "${key}"]`);
+        let parentElement = unos.parentElement;
+        let greskeElement = document.createElement('ul');
+        parentElement.appendChild(greskeElement);
 
         greske[key].forEach(x => {
             let li = document.createElement('li');
             li.innerText = x;
-            greske.appendChild(li);
+            greskeElement.appendChild(li);
         });
     }
 }
